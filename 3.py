@@ -34,9 +34,9 @@ while(condition != 0):
 
         pr = Product(cod, name, price)
         products.append(pr)
-    if(condition == 2):
+    elif(condition == 2):
         print(f'{products}')
-    if(condition == 3):
+    elif(condition == 3):
         print("ingresa el codigo del producto que deseas buscar")
         cod = input()
         for p in products:
@@ -46,14 +46,16 @@ while(condition != 0):
                 print(products)
             else:
                 print("Este producto no existe")
-    if condition == 4:
+    elif condition == 4:
         print("ingresa el codigo del producto que deseas eliminar")
         cod = input()
         for p in products:
             if p["cod"] == cod:
                 products.remove(p)
                 print(f'Producto eliminado')
+                print(f'{products}')
+
             else:
                 print("Este producto no existe")
-    if condition < 0 and condition > 4:
+    else:
         print("Digita una opción valida")
